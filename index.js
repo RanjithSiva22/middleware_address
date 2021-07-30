@@ -107,7 +107,7 @@ fastify.post('/address', async (req, reply) => {
 
 
 
-fastify.listen(1000, err => {
+fastify.listen(process.env.PORT, '0.0.0.0', err => {
     if (err) throw err
     console.log(`server listening on ${fastify.server.address().port}`)
 })
